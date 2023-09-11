@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter the basic salary: "
+read basic
+
+if [ $basic -lt 15000 ]; then
+  HRA=$((basic * 10 / 100))
+  DA=$((basic * 90 / 100))
+else
+  HRA=100
+  DA=$((basic * 98 / 100))
+fi
+
+gross_salary=$((basic + HRA + DA))
+echo "Gross Salary: $gross_salary"
+

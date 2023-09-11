@@ -1,0 +1,45 @@
+Create a new directory (dir1) and create two new files in that directory:
+bash
+Copy code
+# Create directory dir1
+mkdir dir1
+
+# Create two new files in dir1
+touch dir1/file1.txt
+touch dir1/file2.txt
+a. Display the current directory:
+
+bash
+Copy code
+pwd
+b. Listing files and folders in that directory:
+
+bash
+Copy code
+ls dir1
+c. List the content of the directory in alphabetical order:
+
+bash
+Copy code
+ls -l dir1 | sort
+d. List the content of the directory in reverse order:
+
+bash
+Copy code
+ls -l dir1 | sort -r
+e. Create another directory dir2 and move all the files in dir1 to dir2:
+
+bash
+Copy code
+mkdir dir2
+mv dir1/* dir2/
+Use grep to:
+a. Display all lines in a file that contain the string "abc":
+bash
+Copy code
+grep "abc" filename
+b. Display all the lines in a file that do not contain the string "abc":
+
+bash
+Copy code
+grep -v "abc" filename

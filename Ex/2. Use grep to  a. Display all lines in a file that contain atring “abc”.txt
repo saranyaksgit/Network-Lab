@@ -1,0 +1,11 @@
+Use grep to:
+a. Display all lines in a file that contain the string "abc":
+bash
+Copy code
+grep "abc" filename
+b. Display all the lines in a file that do not contain the string "abc":
+
+bash
+Copy code
+grep -v "abc" filename
+

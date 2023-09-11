@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter the first string: "
+read string1
+
+echo "Enter the second string: "
+read string2
+
+if [ -z "$string1" ]; then
+  echo "The first string is empty."
+fi
+
+if [ -z "$string2" ]; then
+  echo "The second string is empty."
+fi
+

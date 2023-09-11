@@ -1,0 +1,16 @@
+To print the current user:
+
+bash
+Copy code
+#!/bin/bash
+
+current_user=$(whoami)
+echo "Current user: $current_user"
+b. To print the current working directory:
+
+bash
+Copy code
+#!/bin/bash
+
+current_directory=$(pwd)
+echo "Current working directory: $current_directory"

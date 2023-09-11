@@ -1,0 +1,23 @@
+#!/bin/bash
+
+power() {
+  num=$1
+  exponent=$2
+  result=1
+
+  while [ $exponent -ne 0 ]; do
+    result=$((result * num))
+    exponent=$((exponent - 1))
+  done
+
+  echo "Result: $result"
+}
+
+echo "Enter the first number: "
+read num1
+
+echo "Enter the second number: "
+read num2
+
+power $num1 $num2
+

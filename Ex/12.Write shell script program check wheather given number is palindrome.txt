@@ -1,0 +1,25 @@
+#!/bin/bash
+
+is_palindrome() {
+  num=$1
+  reverse=0
+  temp=$num
+
+  while [ $num -gt 0 ]; do
+    digit=$((num % 10))
+    reverse=$((reverse * 10 + digit))
+    num=$((num / 10))
+  done
+
+  if [ $temp -eq $reverse ]; then
+    echo "The number is a palindrome."
+  else
+    echo "The number is not a palindrome."
+  fi
+}
+
+echo "Enter a number: "
+read num
+
+is_palindrome $num
+

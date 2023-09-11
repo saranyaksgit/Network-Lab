@@ -1,0 +1,38 @@
+ Use the cut and paste command to swap fields 2 and 3 of the file:
+
+bash
+Copy code
+cut -f 1,3,2 f1 > temp
+mv temp f1
+b. Print the first 2 rows of the file f1:
+
+bash
+Copy code
+head -n 2 f1
+c. Print the content of the 3rd row only of the file f1:
+
+bash
+Copy code
+sed -n '3p' f1
+d. Print only the names from the file f1:
+
+bash
+Copy code
+cut -f 2 f1
+e. Count the number of lines, words, and characters from the file f1:
+
+bash
+Copy code
+wc f1
+Now, let's move on to exercise 5 to print user details:
+
+a. Current user:
+
+bash
+Copy code
+whoami
+b. Current working directory:
+
+bash
+Copy code
+pwd
