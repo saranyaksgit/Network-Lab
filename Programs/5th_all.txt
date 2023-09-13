@@ -1,0 +1,83 @@
+﻿5.1)
+a. Create a new directory (dirl) and create new two files in that directory a.display the current directory
+b. listing files and folders in that directory
+c. list the content of directorty in an alphabetical order
+d. list the content of directory in reverse order
+e. create another directory dir2 move all the files in dirl to dir2
+
+#!/bin/bash
+
+# Create a new directory
+mkdir dirl
+
+# Create two new files in that directory
+touch dirl/z1.txt
+touch dirl/a2.txt
+
+# Display the current directory
+echo "Current directory: $(pwd)"
+
+# Listing files and folders in that directory
+echo "List of files and folders in dirl:"
+ls dirl
+
+# List the content of the directory in alphabetical order
+echo "Content of dirl in alphabetical order:"
+ls -l dirl | sort -k 9
+
+# List the content of the directory in reverse order
+echo "Content of dirl in reverse order:"
+ls -l dirl | sort -k 9 -r
+
+# Create another directory dir2
+mkdir dir2
+
+# Move all the files in dirl to dir2
+mv dirl/* dir2/
+
+# Display the contents of dir2 to verify the move
+echo "Contents of dir2 after moving files:"
+ls dir2
+
+﻿
+
+
+5.2)
+a. Use grep to a. Display all lines in a file that contain string "abc"
+b. display all the lines ina file that does not contain the string "abc"
+
+ubuntu:~$ cat > file
+this line contain ab
+this line contain abc
+this line contain abdc
+^C
+ubuntu:~$ cat file
+this line contain ab
+this line contain abc
+this line contain abdc
+ubuntu@adarshpalakkadan:~$ grep "abc" file
+this line contain abc
+ubuntu@adarshpalakkadan:~$ grep -v "abc" file
+this line contain ab
+this line contain abdc
+
+
+﻿
+
+5.5)
+a. To print user details 
+b. Current user
+c. current working directory
+
+ubuntu:~$ cat /etc/passwd | column -s ":" -t;
+root                 x  0      0      root                                /root                      /bin/bash
+daemon               x  1      1      daemon                              /usr/sbin                  /usr/sbin/nologin
+bin                  x  2      2      bin                                 /bin                       /usr/sbin/nologin
+
+ubuntu:~$ whoami
+ubuntu
+
+ubuntu:~$ pwd
+/home/ubuntu
+
+
